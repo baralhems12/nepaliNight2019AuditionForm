@@ -21,22 +21,21 @@
     </div>
 
 
-    <form>
-      <!-- First Name, Middle Name, Last Name section        -->
+    <form action = "submit.php" method="POST">
       <div class="form-group row">
         <div class="col-md-4">
           <label for="firstName">First Name</label>
-          <input type="text" class="form-control" placeholder="First name" required>
+          <input type="text" class="form-control" placeholder="First name" name = "fname" required>
         </div>
 
         <div class="col-md-4">
           <label for="firstName">Middle Name</label>
-          <input type="text" class="form-control" placeholder="Middle name" required>
+          <input type="text" class="form-control" placeholder="Middle name" name = "mname">
         </div>
 
         <div class="col-md-4">
           <label for="lastName">Last Name </label>
-          <input type="text" class="form-control" placeholder="Last name" required>
+          <input type="text" class="form-control" placeholder="Last name" name = "lname" required>
         </div>
       </div>
 
@@ -44,12 +43,12 @@
       <div class="form-group row">
         <div class="col-md-6">
           <label for="inputEmail">Email</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="example@warhawks.ulm.edu" required>
+          <input type="email" class="form-control" id="inputEmail" placeholder="example@warhawks.ulm.edu" name = "email" required>
         </div>
 
         <div class="col-md-6">
           <label for="phone">Phone Number:</label>
-          <input type="tel" class="form-control" placeholder="XXX-XXX-XXXX" required>
+          <input type="tel" class="form-control" placeholder="XXX-XXX-XXXX"  name = "phoneNumber" required>
 
         <!-- <input type="tel" class="form-control" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               required> -->
@@ -58,23 +57,23 @@
         </div>
       </div>                  
 
-      <div class="form-group row">
+      <div class="form-group row" >
         <div class="col-sm-3">Type of Performance</div>
         <div class="col-sm-9">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <div class="form-check" >
+            <input class="form-check-input" value = "Hosting" type="checkbox"  name = 'performanceType' id="gridCheck1">
             <label class="form-check-label" for="gridCheck1">Hosting</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <input class="form-check-input" value = "Singing" type="checkbox" name = 'performanceType' id="gridCheck1">
             <label class="form-check-label" for="gridCheck2">Singing</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <input class="form-check-input"  value = "Dancing" type="checkbox"  name = 'performanceType' id="gridCheck1">
             <label class="form-check-label" for="gridCheck3">Dancing</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <input class="form-check-input" value = "Others" type="checkbox" name = 'performanceType'  id="gridCheck1">
             <label class="form-check-label" for="gridCheck4">Others</label>
           </div>
         </div>
@@ -84,7 +83,7 @@
       <div class="form-group row">
         <div class="col-sm-3">If others, please specify here:</div>
         <div class="col-sm-9">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" name = "otherDesc" rows="3"></textarea>
         </div>
       </div>
 
@@ -105,7 +104,7 @@
       <div class="form-group row">
         <div class="col-sm-3">If groups, please list the names of all performers:</div>
         <div class="col-sm-9">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+          <textarea class="form-control" name = "performers" id="exampleFormControlTextarea1" rows="5"></textarea>
         </div>
       </div>
 
@@ -122,7 +121,7 @@
           <label for="auditionTime">Audition time</label>
         </div>
         <div class="col-sm-9">
-          <select class="custom-select">
+          <select class="custom-select" name = "timing">
             <option selected>Choose one</option>
             <option value="1">6:00 PM</option>
             <option value="2">6:30 PM</option>
