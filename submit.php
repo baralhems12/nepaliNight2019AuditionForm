@@ -35,7 +35,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-
+/**
 try {
     $conn = new PDO("mysql:host=$servername;dbname=nsa-audition", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -50,5 +50,16 @@ catch(PDOException $e)
     {
     echo "Connection failed: " . $e->getMessage();
     }
+    
+   */
+
+$to = "contact@nsaulm.com";
+$subject = "Audition for Nepali Night";
+$txt = "<B> Name: </B>".$name."\n<b>Phone Number:</b> ".$phone_number."\n<b>Performance Type:</b>" .$performance_type."\n<b> Other Description:
+         </b> ".$other_desc. "\n<b> Nature Text: </b>".$nature_text."\n<b>Performers:</b> ".$performers. "\n<b> Audition Date:</b>".$audition_date. "\n<b> Audition Time:</b>".$timing_time;
+$headers = "From: ".$email . "\r\n" .
+"CC:".$email;
+
+mail($to,$subject,$txt,$headers);
  
 ?>
